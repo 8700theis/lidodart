@@ -1,0 +1,119 @@
+#navbar {
+    width: 1400px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 20px;
+}
+
+.navberLogoContainer {
+    height: 80%;
+}
+
+.navberLogoContainer img {
+    height: 100%;
+    width: auto;
+}
+
+.navbarLinksContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: all 250ms ease-in-out;
+}
+
+.navbarLinksWrapper>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    list-style: none;
+}
+
+.navbarLink {
+    color: var(--yellowColor);
+    text-decoration: none;
+    font-size: var(--fontSizeNavbar);
+    white-space: nowrap;
+}
+
+.navbarLinksWrapper>div>li {
+    width: 100%;
+    position: relative;
+}
+
+.navbarLinksWrapper>div>li::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--yellowColor);
+    transition: width 250ms ease-in-out;
+    box-shadow: 0px 0px 3px 0px var(--yellowColor);
+    -webkit-box-shadow: 0px 0px 3px 0px var(--yellowColor);
+    -moz-box-shadow: 0px 0px 3px 0px var(--yellowColor);
+}
+
+.navbarLinksWrapper>div>li:hover::before {
+    width: 100%;
+    background-color: var(--yellowColor50opacity);
+}
+
+.navbarLinksWrapper>div>li.active::before {
+    width: 100%;
+}
+
+.navbarLinksContainer.active {
+    right: 0;
+}
+
+@media only screen and (max-width: 964px) {
+    .navbarLinksContainer {
+        position: absolute;
+        top: 80px;
+        right: -100%;
+        z-index: 100;
+        width: 50%;
+        height: 100vh;
+        background-color: var(--darkColor);
+    }
+    .navbarLinksWrapper {
+        justify-content: center;
+        width: 100%;
+    }
+    .navbarLinksWrapper>div {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: fit-content;
+        gap: 2.5rem;
+        margin-left: 50px;
+    }
+    .navbarLinksWrapper>div>li>a {
+        font-size: var(--fontSize24px);
+        position: relative;
+        font-family: semiBold;
+    }
+    .navbarLinksWrapper>div>li>a::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -30px;
+        width: 10px;
+        height: 2px;
+        background-color: var(--yellowColor50opacity);
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .navbarLinksContainer {
+        width: 100%;
+    }
+}
