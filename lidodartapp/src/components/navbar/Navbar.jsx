@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useMatch, useResolvedPath } from 'react-router-dom';
 import Burgermenu from './Burgermenu';
-import logo from './assets/lidodart-logo.webp';
+// import logo from './assets/lidodart-logo.webp';
+import logo from './assets/lidodart-logoYellow.png';
 import './navbar.css';
 
 export default function Navbar() {

@@ -16,9 +16,10 @@
 :root {
   --whiteColor: #EFEFEF;
   --darkColor: #212529;
+  --yellowColor: #F8F335;
   --greenColor: #05b905;
   --errorColor: #F0706A;
-  --fontSizeNavbar: 20px;
+  --fontSizeNavbar: 18px;
   --fontSize24px: 24px;
   --fontSizeStandard: 16px;
   --fontSizefooterMobil: 14px;
@@ -33,4 +34,28 @@
 
 .App {
   background-color: var(--whiteColor);
+}
+
+.navMainContainer {
+  width: 100%;
+  height: 80px;
+  background-color: var(--darkColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  /* overflow: hidden; */
+}
+
+.mainContent {
+  overflow: hidden;
+}
+
+.footerMainContainer {
+  width: 100%;
+  background-color: var(--darkColor);
+  overflow: hidden;
 }

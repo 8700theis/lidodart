@@ -1,10 +1,10 @@
 #navbar {
-    width: 1400px;
+    width: 1300px;
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 20px;
+    margin: 0 20px; 
 }
 
 .navberLogoContainer {
@@ -63,7 +63,7 @@
 
 .navbarLinksWrapper>div>li:hover::before {
     width: 100%;
-    background-color: var(--yellowColor50opacity);
+    background-color: var(--yellowColor);
 }
 
 .navbarLinksWrapper>div>li.active::before {
@@ -108,7 +108,7 @@
         left: -30px;
         width: 10px;
         height: 2px;
-        background-color: var(--yellowColor50opacity);
+        background-color: var(--yellowColor);
     }
 }
 
