@@ -5,6 +5,9 @@ import Loading from './components/loading/Loading';
 import ScrollToTop from './components/scrollToTop/ScrollToTop';
 import Navbar from './components/navbar/Navbar';
 
+import Home from './pages/Home';
+import Footer from './components/footer/Footer';
+
 const baseURL = 'https://lidodartcms.tbndesign.dk/wp-json/wp/v2/';
 
 const frontpageURL = `${baseURL}frontpage`;
@@ -41,6 +44,14 @@ function App() {
             <ScrollToTop />
             <section className="navMainContainer">
 				<Navbar />
+			</section>
+			<section className='mainContent'>
+				<Routes>
+					<Route path='/' element={<Home frontpageData={frontpage} />} />
+				</Routes>
+			</section>
+			<section className='footerMainContainer'>
+				<Footer />
 			</section>
         </div>
     );

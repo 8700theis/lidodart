@@ -23,10 +23,11 @@ export default function Navbar() {
             <div className={burgerNavActive ? 'navbarLinksContainer active' : 'navbarLinksContainer'}>
                 <ul className="navbarLinksWrapper">
                     <div>
-                        <CustomLink to='/' onClick={() => handleBurgerClick()}>Forside</CustomLink>
-                        <CustomLink to='/baggedesign' onClick={() => handleBurgerClick()}>Bagge Design</CustomLink>
-                        <CustomLink to='/dreamsbybagges' onClick={() => handleBurgerClick()}>Dreams By Bagges</CustomLink>
-                        <CustomLink to='/kontakt' onClick={() => handleBurgerClick()}>Kontakt</CustomLink>
+                        <CustomLink to='/bliv-medlem-af-lido-dartklub' onClick={() => handleBurgerClick()}>Bliv medlem</CustomLink>
+                        <CustomLink to='/nyheder' onClick={() => handleBurgerClick()}>Nyheder</CustomLink>
+                        <CustomLink to='/sponsorer' onClick={() => handleBurgerClick()}>Sponsorer</CustomLink>
+                        <CustomLink to='/om-lido-dartklub' onClick={() => handleBurgerClick()}>Om Lido Dartklub</CustomLink>
+                        <CustomLink to='/kontakt-lido-dartklub' onClick={() => handleBurgerClick()}>Kontakt os</CustomLink>
                     </div>
                 </ul>
             </div>
