@@ -1,0 +1,39 @@
+#infobar {
+    width: 1300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    margin: 0 20px;
+    position: relative;
+}
+
+/* #infobar::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    height: 1px;
+    width: 100vw;
+    background-color: var(--yellowColor);
+} */
+
+.infobarContainer {
+    display: flex;
+    gap: 2rem;
+}
+
+.infobarPhoneTimeContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--whiteColor);
+    font-size: var(--fontSizeSmall);
+    transition: all 250ms ease;
+}
+
+.infobarPhoneTimeContainer.link:hover {
+    opacity: 0.7;
+}

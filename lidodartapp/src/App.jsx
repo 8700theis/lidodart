@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import Loading from './components/loading/Loading';
 import ScrollToTop from './components/scrollToTop/ScrollToTop';
+import TopInfoBar from './components/navbar/TopInfoBar';
 import Navbar from './components/navbar/Navbar';
 
 import Home from './pages/Home';
@@ -43,7 +44,10 @@ function App() {
         <div className="App">
             <ScrollToTop />
             <section className="navMainContainer">
-				<Navbar />
+				<div className="navMainWrapper">
+					<TopInfoBar />
+					<Navbar />
+				</div>
 			</section>
 			<section className='mainContent'>
 				<Routes>
