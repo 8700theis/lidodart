@@ -19,11 +19,12 @@
   --yellowColor: #F8F335;
   --greenColor: #05b905;
   --errorColor: #F0706A;
+  --fontSizeSmall: 12px;
+  --fontSizefooterMobil: 14px;
+  --fontSizeStandard: 16px;
   --fontSizeNavbar: 18px;
   --fontSize24px: 24px;
-  --fontSizeStandard: 16px;
-  --fontSizefooterMobil: 14px;
-  --fontSizeSmall: 12px;
+  --fontSizeHeadingH1: 42px;
 }
 
 * {

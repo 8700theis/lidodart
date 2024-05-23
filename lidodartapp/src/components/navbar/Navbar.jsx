@@ -25,8 +25,8 @@ export default function Navbar() {
                 <ul className="navbarLinksWrapper">
                     <div>
                         <CustomLink to='/bliv-medlem-af-lido-dartklub' onClick={() => handleBurgerClick()}>Bliv medlem</CustomLink>
+                        <CustomLink to='/turnering-og-hold' onClick={() => handleBurgerClick()}>Turnering og Hold</CustomLink>
                         <CustomLink to='/nyheder' onClick={() => handleBurgerClick()}>Nyheder</CustomLink>
-                        <CustomLink to='/sponsorer' onClick={() => handleBurgerClick()}>Sponsorer</CustomLink>
                         <CustomLink to='/om-lido-dartklub' onClick={() => handleBurgerClick()}>Om Lido Dartklub</CustomLink>
                         <CustomLink to='/kontakt-lido-dartklub' onClick={() => handleBurgerClick()}>Kontakt os</CustomLink>
                     </div>

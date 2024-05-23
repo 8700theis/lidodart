@@ -24,9 +24,15 @@ export default function TopInfoBar() {
                     <p className="infobarText">Den største dartklub i Horsens</p>
                 </div>
                 <div className="infobarSocialsContainer">
-                    <IoLogoFacebook />
-                    <SlSocialInstagram />
-                    <FaSnapchatSquare />
+                    <a href="https://www.facebook.com/groups/43268383417/">
+                        <IoLogoFacebook />
+                    </a>
+                    <a href="https://www.instagram.com/lidodart/">
+                        <SlSocialInstagram />
+                    </a>
+                    <a href="https://www.snapchat.com/add/lidodart">
+                        <FaSnapchatSquare />
+                    </a>
                 </div>
             </article>
         </section>
