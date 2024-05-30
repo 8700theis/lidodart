@@ -7,6 +7,7 @@ import TopInfoBar from './components/navbar/TopInfoBar';
 import Navbar from './components/navbar/Navbar';
 
 import Home from './pages/Home';
+import Member from './pages/Member';
 import Footer from './components/footer/Footer';
 
 const baseURL = 'https://lidodartcms.tbndesign.dk/wp-json/wp/v2/';
@@ -52,6 +53,7 @@ function App() {
 			<section className='mainContent'>
 				<Routes>
 					<Route path='/' element={<Home frontpageData={frontpage} />} />
+					<Route path='/bliv-medlem-af-lido-dartklub' element={<Member frontpageData={frontpage} />} />
 				</Routes>
 			</section>
 			<section className='footerMainContainer'>
