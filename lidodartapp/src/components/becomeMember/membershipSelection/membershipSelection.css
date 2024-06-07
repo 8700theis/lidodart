@@ -1,0 +1,23 @@
+#memberselect {
+    margin: 0 auto;
+    padding: 240px 0 100px;
+    max-width: 1300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.memberselectContainer {
+    width: 100%;
+}
+
+.memberselectTitle {
+    color: var(--darkColor);
+    font-size: var(--fontSize24px);
+    margin-bottom: 20px;
+}
+
+.memberselectText {
+    color: var(--darkColor);
+    font-size: var(--fontSizeStandard);
+}
