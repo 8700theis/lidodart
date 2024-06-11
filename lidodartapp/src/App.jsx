@@ -13,19 +13,22 @@ import Footer from './components/footer/Footer';
 const baseURL = 'https://lidodartcms.tbndesign.dk/wp-json/wp/v2/';
 
 const frontpageURL = `${baseURL}frontpage`;
+const memberURL = `${baseURL}member`;
 
-const fetchURLs = [frontpageURL];
+const fetchURLs = [frontpageURL, memberURL];
 
 function App() {
     const [isLoading, setIsLoading] = useState(true);
     const [frontpage, setFrontpage] = useState(true);
+    const [memberpage, setMemberpage] = useState(true);
 
     const fetchData = async () => {
 		setIsLoading(true);
-		const [frontpageData] = await Promise.all(
+		const [frontpageData, memberData] = await Promise.all(
 		  	fetchURLs.map((url) => fetch(url).then((res) => res.json()))
 		);
 		setFrontpage(frontpageData[0].acf);
+		setMemberpage(memberData[0].acf);
 		setIsLoading(false);
 	}
 
@@ -53,7 +56,7 @@ function App() {
 			<section className='mainContent'>
 				<Routes>
 					<Route path='/' element={<Home frontpageData={frontpage} />} />
-					<Route path='/bliv-medlem-af-lido-dartklub' element={<Member frontpageData={frontpage} />} />
+					<Route path='/bliv-medlem-af-lido-dartklub' element={<Member memberpageData={memberpage} />} />
 				</Routes>
 			</section>
 			<section className='footerMainContainer'>

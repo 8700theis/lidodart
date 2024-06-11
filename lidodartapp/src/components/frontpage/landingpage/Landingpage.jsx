@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './landingpage.css';
-import landingimage from  './assets/lidodartLanding.jpg';
 
 export default function Landingpage({ landingpageData }) {
     const [landingpage, setLandingpage] = useState([landingpageData]);
@@ -21,21 +20,31 @@ export default function Landingpage({ landingpageData }) {
 
     return (
         <section id='landingpage'>
-            <section className="landingpageContainer">
-                <div className="landingpageBgContainer">
-                    {showImage(landingimage)}
-                </div>
-                <article className="landingpageTextContainer">
-                    <div className="landingpageTextWrapper">
-                        <h1 className="landingpageHeading">Velkommen til Lido</h1>
-                        <p className="landingpageText">Klik ind for at se medlemspriserne eller tjek Lidos kommende arrangementer.</p>
-                        <div className="landingpageCtaContainer">
-                            <Link to='/medlemspriser' className="landingpageCta">Medlemspriser</Link>
-                            <Link to='/kommende-arrangementer' className="landingpageCta">Kommende arrangementer</Link>
+            {landingpage.map((data, index) => {
+                const {fp_showImage, fp_bgImage, fp_bgVideo, fp_heading, fp_text, fp_ctas} = data;
+
+                return (
+                    <section key={index} className="landingpageContainer">
+                        <div className="landingpageBgContainer">
+                            {fp_showImage ? showImage(fp_bgImage) : showImage(fp_bgVideo)}
                         </div>
-                    </div>
-                </article>
-            </section>
+                        <article className="landingpageTextContainer">
+                            <div className="landingpageTextWrapper">
+                                <h1 className="landingpageHeading">{fp_heading}</h1>
+                                <div className="landingpageText" dangerouslySetInnerHTML={{__html: fp_text}}></div>
+                                <div className="landingpageCtaContainer">
+                                    {fp_ctas.map((cta, index) => {
+                                        const {fp_ctas_text, fp_ctas_link} = cta;
+                                        return (
+                                            <Link key={index} to={`/${fp_ctas_link}`} className="landingpageCta">{fp_ctas_text}</Link>
+                                        )
+                                    })}
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                )
+            })}
         </section>
     )
 }
