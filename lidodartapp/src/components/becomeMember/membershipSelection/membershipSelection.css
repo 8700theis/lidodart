@@ -9,7 +9,16 @@
 
 .memberselectContainer {
     width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
 }
+
+.memberselectContent {
+    width: 40%;
+}
+
 
 .memberselectTitle {
     color: var(--darkColor);
@@ -20,4 +29,111 @@
 .memberselectText {
     color: var(--darkColor);
     font-size: var(--fontSizeStandard);
+}
+
+.memberselectPlanContainer {
+    width: 60%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.memberselectPlan {
+    width: 50%;
+    border: 1px solid var(--darkColor50opacity);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.memberselectPlan.activeMembership {
+    background-color: var(--darkColor);
+}
+
+.memberselectPlanHeading {
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--darkColor);
+    font-size: 20px;
+}
+
+.memberselectPlanHeading.activeMembership {
+    color: var(--yellowColor);
+}
+
+.memberselectPlanBtnContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.memberselectPlanBtn {
+    font-family: semiBold;
+    width: 100%;
+    text-align: center;
+    border: 1px solid var(--darkColor);
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 250ms ease;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    color: var(--whiteColor);
+    background-color: var(--darkColor);
+    font-size: var(--fontSizeStandard);
+}
+
+.memberselectPlanBtn.activeMembership {
+    border: 1px solid var(--yellowColor);
+    color: var(--darkColor);
+    background-color: var(--yellowColor);
+    transition: all 250ms ease;
+}
+
+.memberselectPlanBtn:hover {
+    color: var(--darkColor);
+    background-color: var(--whiteColor);
+}
+
+.memberselectPlanBtn.activeMembership:hover {
+    border: 1px solid var(--whiteColor);
+    color: var(--darkColor);
+    background-color: var(--whiteColor);
+}
+
+.memberselectPlanLine {
+    width: 100%;
+    height: 1px;
+    background-color: var(--darkColor50opacity);
+    margin-bottom: 30px;
+}
+
+.memberselectPlanLine.activeMembership {
+    background-color: var(--whiteColor50opacity);
+}
+
+.memberselectPlanFeatureIconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 15px;
+}
+
+.memberselectPlanFeatureIconWrapper {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--darkColor);
+}
+
+.memberselectPlanFeatureText {
+    color: var(--darkColor);
+    font-size: var(--fontSizefooterMobil);
+}
+
+.memberselectPlanFeatureText.activeMembership {
+    color: var(--whiteColor);
 }

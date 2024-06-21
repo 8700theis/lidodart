@@ -15,10 +15,12 @@
 
 :root {
   --whiteColor: #EFEFEF;
+  --whiteColor50opacity: #efefef81;
   --darkColor: #212529;
+  --darkColor50opacity: #2125297c;
   --yellowColor: #F8F335;
-  --greenColor: #05b905;
-  --errorColor: #F0706A;
+  --greenColor: #45d345;
+  --errorColor: #f07973;
   --fontSizeSmall: 12px;
   --fontSizefooterMobil: 14px;
   --fontSizeStandard: 16px;

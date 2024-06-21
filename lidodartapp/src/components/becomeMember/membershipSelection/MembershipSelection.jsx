@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { IoCheckmarkCircle, IoAddCircleSharp } from "react-icons/io5";
 import './membershipSelection.css';
 
@@ -47,14 +48,22 @@ export default function MembershipSelection({ membershipData }) {
                                     }];
                                 
                                 return (
-                                    <section key={index} className="memberselectPlan">
-                                        <h3 className="memberselectPlanHeading">{member_ap_plans_heading}</h3>
+                                    <section key={index} className={index === 1 ? "memberselectPlan activeMembership" : "memberselectPlan"}>
+                                        <h3 className={index === 1 ? "memberselectPlanHeading activeMembership" : "memberselectPlanHeading"}>{member_ap_plans_heading}</h3>
+                                        <div className='memberselectPlanBtnContainer'>
+                                            <Link to='#' className={index === 1 ? "memberselectPlanBtn activeMembership" : "memberselectPlanBtn"}>{index === 1 ? 'Vælg Medlemsskab' : 'Bliv Medlem'}</Link>
+                                        </div>
+                                        <div className={index === 1 ? "memberselectPlanLine activeMembership" : "memberselectPlanLine"}></div>
                                         <div className="memberselectPlanFeatureContainer">
-                                            {planText.map((item, index) => {
+                                            {planText.map((item, textindex) => {
+                                                const styleCheck = {color : "var(--greenColor)", fontSize: "var(--fontSizeNavbar)"}
+                                                const styleMinus = {color : "var(--errorColor)", fontSize: "var(--fontSizeNavbar)"}
                                                 return (
-                                                    <div key={index} className="memberselectPlanFeatureIconContainer">
-                                                        {item.value[0] == 'true' ? <IoCheckmarkCircle /> : <IoAddCircleSharp />}
-                                                        <p className="memberselectPlanFeatureText">{item.text}</p>
+                                                    <div key={textindex} className="memberselectPlanFeatureIconContainer">
+                                                        <div className="memberselectPlanFeatureIconWrapper">
+                                                            {item.value[0] == 'true' ? <IoCheckmarkCircle style={styleCheck} /> : <IoAddCircleSharp style={styleMinus} />}
+                                                        </div>
+                                                        <p className={index === 1 ? "memberselectPlanFeatureText activeMembership" : "memberselectPlanFeatureText"}>{item.text}</p>
                                                     </div>
                                                 )
                                             })}
