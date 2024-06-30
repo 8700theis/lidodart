@@ -51,7 +51,7 @@ export default function MembershipSelection({ membershipData }) {
                                     <section key={index} className={index === 1 ? "memberselectPlan activeMembership" : "memberselectPlan"}>
                                         <h3 className={index === 1 ? "memberselectPlanHeading activeMembership" : "memberselectPlanHeading"}>{member_ap_plans_heading}</h3>
                                         <div className='memberselectPlanBtnContainer'>
-                                            <Link to='#' className={index === 1 ? "memberselectPlanBtn activeMembership" : "memberselectPlanBtn"}>{index === 1 ? 'Vælg Medlemsskab' : 'Bliv Medlem'}</Link>
+                                            <Link to={index === 1 ? '/bliv-medlem-af-lido-dartklub/aktiv' : '/bliv-medlem-af-lido-dartklub/passiv'} className={index === 1 ? "memberselectPlanBtn activeMembership" : "memberselectPlanBtn"}>{index === 1 ? 'Vælg Medlemsskab' : 'Bliv Medlem'}</Link>
                                         </div>
                                         <div className={index === 1 ? "memberselectPlanLine activeMembership" : "memberselectPlanLine"}></div>
                                         <div className="memberselectPlanFeatureContainer">

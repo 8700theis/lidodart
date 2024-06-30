@@ -96,9 +96,9 @@
 }
 
 .memberselectPlanBtn.activeMembership:hover {
-    border: 1px solid var(--whiteColor);
-    color: var(--darkColor);
-    background-color: var(--whiteColor);
+    border: 1px solid var(--yellowColor);
+    color: var(--yellowColor);
+    background-color: var(--darkColor);
 }
 
 .memberselectPlanLine {
